@@ -40,8 +40,8 @@ select
 from trip_data
 where rn=1
 -- dbt build --select green_2021_2022 --vars 'is_test_run: false'
-{% if var('is_test_run', default=true) %}
+-- {% if var('is_test_run', default=true) %}
 
-  limit 100
+--   limit 100
 
-{% endif %}
+-- {% endif %}

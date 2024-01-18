@@ -6,8 +6,8 @@ with trips_data as (
     select 
     -- Reveneue grouping 
     pickup_zone as revenue_zone,
-    format_date('%B', pickup_datetime) as revenue_month,
-    service_type, 
+    format_date('%B %Y', pickup_datetime) as revenue_month,
+    service_type,
 
     -- Revenue calculation 
     sum(fare_amount) as revenue_monthly_fare,

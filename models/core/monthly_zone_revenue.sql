@@ -6,7 +6,7 @@ with trips_data as (
     select 
     -- Reveneue grouping 
     pickup_zone as revenue_zone,
-    dbt_utils.date_trunc(pickup_datetime, date_part='month') as pickup_month,
+    date_trunc(pickup_datetime, month) as pickup_month,
     service_type,
 
     -- Revenue calculation 

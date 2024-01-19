@@ -4,7 +4,7 @@ with trip_data as
   select *,
     row_number() over(partition by vendorid, tpep_pickup_datetime) as rn
   from {{ source('staging','yellowtaxi_2021_2022') }}
-  where passenger_count is not null 
+  where passenger_count!=0
 )
 select 
     -- identifiers
